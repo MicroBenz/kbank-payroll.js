@@ -16,6 +16,10 @@
   "bugs": {
     "url": "https://github.com/MicroBenz/kbank-payroll.js/issues"
   },
+  "keywords": [
+    "kbank",
+    "payroll"
+  ],
   "homepage": "https://github.com/MicroBenz/kbank-payroll.js#readme",
   "devDependencies": {
     "@types/jest": "^24.0.11",

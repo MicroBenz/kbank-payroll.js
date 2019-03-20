@@ -37,6 +37,7 @@ function validateTransactions(transactions) {
   });
   return filtered.length === 0;
 }
+
 function smartPayroll(transactions = [], config) {
   if (!config.companyName) {
     throw new Error('config is invalid! companyName is required');
