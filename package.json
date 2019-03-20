@@ -1,10 +1,12 @@
 {
-  "name": "kbank-payroll",
+  "name": "kbank-payroll.js",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "jest --watch",
+    "prepublish": "npm run lint && npm run test",
+    "lint": "eslint index.js",
     "test": "jest"
   },
   "repository": {
