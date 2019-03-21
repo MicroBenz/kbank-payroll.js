@@ -1,12 +1,12 @@
 {
   "name": "kbank-payroll.js",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.2",
+  "description": "Export data as text file that support KBank Smart Payroll system",
+  "main": "src/index.js",
   "scripts": {
     "dev": "jest --watch",
     "prepublish": "npm run lint && npm run test",
-    "lint": "eslint index.js",
+    "lint": "eslint src/index.js",
     "test": "jest"
   },
   "repository": {
@@ -35,5 +35,8 @@
   "dependencies": {
     "dayjs": "^1.8.10",
     "lodash": "^4.17.11"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
