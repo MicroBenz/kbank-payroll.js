@@ -1,6 +1,6 @@
 {
   "name": "kbank-payroll.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Export data as text file that support KBank Smart Payroll system",
   "main": "src/index.js",
   "scripts": {

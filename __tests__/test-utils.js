@@ -14,4 +14,8 @@ module.exports = {
     { name: 'Amorntest Ched', amount: 1970, accountNumber: '4371992192' },
     { name: 'Noppon Test', amount: 8970, accountNumber: '4371992192' },
   ],
+  getSampleTransactionStringAmount: () => [
+    { name: 'Nontapat Piyamongkol', amount: '4074.88', accountNumber: '4371992192' },
+    { name: 'Tananan Tangthanachaikul', amount: '75', accountNumber: '4371992192' },
+  ],
 };

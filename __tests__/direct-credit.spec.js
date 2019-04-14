@@ -18,4 +18,13 @@ describe('Direct Credit', () => {
     const file = fs.readFileSync(`${__dirname}/direct-credit.testcase.txt`).toString();
     expect(res).toEqual(file);
   });
+
+  it('should correct, amount send in as string', () => {
+    const res = kbank.directCredit(
+      utils.getSampleTransactionStringAmount(),
+      { ...utils.getConfig(), date: new Date('03, 21 2019') },
+    );
+    const file = fs.readFileSync(`${__dirname}/direct-credit.testcase.2.txt`).toString();
+    expect(res).toEqual(file);
+  });
 });

@@ -13,7 +13,7 @@ function getAmountString(amount) {
 function getTotalAmount(transactions) {
   const totalAmount = transactions
     .reduce((prev, curr) => {
-      return prev + curr.amount;
+      return prev + Number(curr.amount);
     }, 0);
   return (totalAmount * 100).toFixed(0);
 }
