@@ -11,6 +11,20 @@
     "__dirname": true
   },
   "rules": {
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "import/extensions": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "IConfig|ITransaction"
+      }
+    ],
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }
