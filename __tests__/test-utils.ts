@@ -1,10 +1,12 @@
-module.exports = {
+import { ITransaction } from "../src/types";
+
+export default {
   getConfig: () => ({
     companyName: 'TMT Marketplace Pte. Ltd.',
     accountNumber: '1234567890',
     date: new Date('02, 22 2019'),
   }),
-  getSampleTransactions: () => [
+  getSampleTransactions: (): ITransaction[] => [
     { name: 'Nontapat Piyamongkol', amount: 6370, accountNumber: '4371992192' },
     { name: 'Tananan Tangthanachaikul', amount: 3700, accountNumber: '4371992192' },
     { name: 'Kunakorn Test', amount: 12500, accountNumber: '4371992192' },
@@ -14,7 +16,7 @@ module.exports = {
     { name: 'Amorntest Ched', amount: 1970, accountNumber: '4371992192' },
     { name: 'Noppon Test', amount: 8970, accountNumber: '4371992192' },
   ],
-  getSampleTransactionStringAmount: () => [
+  getSampleTransactionStringAmount: (): ITransaction[] => [
     { name: 'Nontapat Piyamongkol', amount: '4074.88', accountNumber: '4371992192' },
     { name: 'Tananan Tangthanachaikul', amount: '75', accountNumber: '4371992192' },
   ],

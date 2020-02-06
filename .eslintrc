@@ -1,9 +1,14 @@
 {
-  "extends": "airbnb",
+  "extends": "airbnb-base",
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "globals": {
     "describe": true,
     "it": true,
-    "expect": true
+    "expect": true,
+    "__dirname": true
   },
   "rules": {
     "arrow-body-style": "off"

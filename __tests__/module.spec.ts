@@ -1,4 +1,4 @@
-const kbank = require('../src');
+import kbank from '../src';
 
 describe('kbank-payroll.js require module', () => {
   it('module should have 2 functions: smartPayroll and directCredit', () => {

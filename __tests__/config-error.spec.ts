@@ -1,4 +1,4 @@
-const kbank = require('../src');
+import kbank from '../src';
 
 describe('Error Handling', () => {
   it('should throw error without company name', () => {

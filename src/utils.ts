@@ -1,16 +1,17 @@
-const { padStart, padEnd: lodashPadEnd } = require('lodash');
+import { padStart, padEnd as lodashPadEnd } from 'lodash';
+import { ITransaction } from './types';
 
-function getDefaultConfig() {
+export function getDefaultConfig() {
   return {
-    date: Date.now(),
+    date: new Date(),
   };
 }
 
-function getAmountString(amount) {
-  return (amount * 100).toFixed(0);
+export function getAmountString(amount: number | string): string {
+  return (Number(amount) * 100).toFixed(0);
 }
 
-function getTotalAmount(transactions) {
+export function getTotalAmount(transactions: ITransaction[]): string {
   const totalAmount = transactions
     .reduce((prev, curr) => {
       return prev + Number(curr.amount);
@@ -18,7 +19,7 @@ function getTotalAmount(transactions) {
   return (totalAmount * 100).toFixed(0);
 }
 
-function validateTransactions(transactions) {
+export function validateTransactions(transactions: ITransaction[]): boolean {
   if (!Array.isArray(transactions)) return false;
   const filtered = transactions.filter((transaction) => {
     if (!transaction.name || transaction.name.length <= 0) {
@@ -35,11 +36,11 @@ function validateTransactions(transactions) {
   return filtered.length === 0;
 }
 
-function padEnd(str, length) {
+export function padEnd(str: string, length: number): string {
   return lodashPadEnd(str, length).substr(0, length);
 }
 
-module.exports = {
+export default {
   getDefaultConfig,
   getAmountString,
   getTotalAmount,

@@ -1,6 +1,6 @@
-const fs = require('fs');
-const kbank = require('../src');
-const utils = require('./test-utils');
+import fs from 'fs';
+import kbank from '../src';
+import utils from './test-utils';
 
 describe('Direct Credit', () => {
   it('should correct, with only header', () => {
